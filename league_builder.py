@@ -8,9 +8,9 @@ if __name__ == "__main__":
             raptors.append(players.pop())
         return sharks, dragons, raptors
 
+    players = []
     with open('soccer_players.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile, delimiter=',')
-        players = []
         for player in reader:
             players.append({"Name": player['Name'],
                             "Experienced": player['Soccer Experience'],
