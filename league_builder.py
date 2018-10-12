@@ -3,9 +3,9 @@ if __name__ == '__main__':
 
     def team_splitter(experienced_players, inexperienced_players):
         '''Takes a list of experienced players and a list of inexperienced
-           players and divides them up in round-robin fashion and returns a
-           list of players for each team.
-           '''
+        players and divides them up in round-robin fashion and returns a
+        list of players for each team.
+        '''
         def split(players):
             while players:
                 sharks.append(players.pop())
@@ -19,8 +19,8 @@ if __name__ == '__main__':
 
     def team_writer(team, players):
         '''Takes a list of players and their corresponding team name and
-           appends them to teams.txt
-           '''
+        appends them to teams.txt
+        '''
         with open('teams.txt', 'a') as file:
             file.write('{}\n'.format(team))
             for player in players:
@@ -29,9 +29,8 @@ if __name__ == '__main__':
                                                  player['Guardian Name(s)']))
             file.write('\n')
 
-    '''Initializes the players variable, reads the csv file and appends the list
-       of players to the players variable.
-       '''
+    # Initializes the players variable, reads the csv file
+    # and appends the list of players to the players variable.
     players = []
     with open('soccer_players.csv', newline='') as csvfile:
         reader = csv.DictReader(csvfile, delimiter=',')
@@ -41,10 +40,8 @@ if __name__ == '__main__':
                             'Guardian Name(s)': player['Guardian Name(s)']
                             })
 
-    '''Initializes variables for experienced and
-       inexperienced players then iterates through the list
-       of players and assigns the players accordingly.
-       '''
+    # Initializes variables for experienced and inexperienced players then
+    # iterates through the list of players and assigns the players accordingly.
     experienced_players = []
     inexperienced_players = []
     for player in players:
