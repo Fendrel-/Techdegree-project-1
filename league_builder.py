@@ -35,7 +35,7 @@ def team_writer(team, players):
     '''Takes a list of players and their corresponding team name and
     appends them to teams.txt.
     '''
-    with open('teams.txt', 'w') as file:
+    with open('teams.txt', 'a') as file:
         file.write('{}\n'.format(team))
         for player in players:
             file.write('{}, {}, {}\n'.format(player['Name'],
