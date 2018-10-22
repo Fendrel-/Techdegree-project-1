@@ -43,7 +43,14 @@ def team_writer(team, players):
                                              player['Experienced'],
                                              player['Guardian Name(s)']))
         file.write('\n')
+        
 
+def welcome_letter(team, players):
+    '''Takes a list of players and their corresponding team name and creates
+    a welcome letter to the parents in the form of a .txt file for each player
+    '''
+    for player in players:
+        print(player['Name'])
 
 def csv_reader():
     '''Initializes the players variable, reads the csv file
@@ -82,6 +89,9 @@ def main():
     team_writer('Sharks', sharks)
     team_writer('Dragons', dragons)
     team_writer('Raptors', raptors)
+    welcome_letter('Sharks', sharks)
+    welcome_letter('Dragons', dragons)
+    welcome_letter('Raptors', raptors)
 
 
 if __name__ == '__main__':
