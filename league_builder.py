@@ -51,7 +51,6 @@ def welcome_letter(team, players, first_practice):
     for player in players:
         name = player['Name'].lower().split()
         name = '_'.join(name)
-        print(name)
         with open('{}.txt'.format(name), 'w') as file:
             file.write('Dear {},\n\n\n'.format(player['Guardian Name(s)']))
             file.write('We are excited to announce the teams for this year\'s ')
